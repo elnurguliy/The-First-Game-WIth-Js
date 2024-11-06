@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Signika:wght@300..700&family=VT323&display=swap');
+
+body {
+    background-image: url(black.jpeg); /* Skapa en solid svart bakgrundsbild */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out; /* Smidig övergång */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Cairo', sans-serif;
+}
+
+h1 {
+    font-family: "VT323", monospace;
+    background-image: url(https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmxhN2pjaGp4MmZtanZmc2VkcDEzYnd5bms5dTF6cGo4ZWZyMWkxcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TjSaNRzMZyrk6KCQOb/giphy-downsized-large.gif);
+    background-size: cover;
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 6rem;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.full-screen-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url('cave.webp'); */
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#blurred-box {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* .console-underscore {
+    display: inline-block;
+    animation: blink 1s infinite;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+} */
+
+#options {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.whisperText {
+    font-family: "VT323", monospace;
+    font-size: x-large;
+    text-transform: uppercase;
+    color: rgb(255, 68, 51);
+}
+
+/* Textfönster */
+#content {
+    font-family: "VT323", monospace;
+    font-size: larger;
+    text-align: left;
+    padding: 20px;
+    color: #fff;
+    margin: 0 auto;
+    line-height: 1.6rem;
+    width: 80%;
+}
+
+.oldSageText {
+    font-style: italic;
+}
+
+/* Fade-in effekt för text och knappar */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* Knappar */
+button {
+    font-family: "VT323", monospace;
+    background-color: rgb(243, 156, 18); 
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.7rem;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: rgb(231, 126, 35); /* Mörkare */
+    transform: translateY(-2px); /* Liten uppåt rörelse */
+}
+
+/* Popup stil */
+#popupMessage {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(46, 204, 113, 0.9);
+    display: none; 
+    z-index: 1000; /* Se till att den är ovanpå andra element */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}

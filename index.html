@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cave Nightmare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+</head>
+<body>
+
+        <div id="backgroundOverlay"></div>
+
+    <h1 id="title">Welcome to the mysterious cave adventure</h1>
+    <div id="statScreen">
+        <button id="startButton" onclick="startGame()">Start The Game</button>
+    </div>
+
+    <div id="sceneContainer" style="display: none;" class="full-screen-section">
+        <div id="blurred-box">
+            <div id="content"></div>
+            <div id="options"></div>
+        </div>
+    </div>
+    <div id="popupMessage" class="popup"></div>
+</body>
+</html>
