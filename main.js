@@ -1,23 +1,40 @@
 
-function startGame() {
-    // Dölj startskärmen och startknappen
-    document.getElementById("title").style.display = "none";
-    document.getElementById("statScreen").style.display = "none";
+// window.addEventListener("DOMContentLoaded", main);
 
-    // Visa spelgränssnittet
-    document.getElementById("sceneContainer").style.display = "flex";
 
-    // Ändra bakgrund för första scenen och visa texten
-    changeBackground('story'); // Ändra till första scenens bakgrundsbild
-
-    // Definiera texten för första scenen
-    const storyText = `A young man wakes up in a dark cave, alone and disoriented. The only thing he remembers is a mysterious map hidden in his pocket, showing the way to a legendary treasure, the lost ark.`;
+// function main() {
+//         startGame();
+//         showScene();
+//         typeText();
+//         showWhisperOptions();
+//         selectPath();
+//         changeBackground();
+//         showPopupMessage();
+//         listenToTheOldMan();
+//         exploreText();
     
-    // Börja med typningseffekten för första scenen
-    typeText(storyText, () => {
-        setTimeout(() => showWhisperOptions(), 500); // Visa whisper options efter typning är klar
-    });
-}
+//     }
+    
+    function startGame() {
+        // Dölj startskärmen och startknappen
+        document.getElementById("title").style.display = "none";
+        document.getElementById("statScreen").style.display = "none";
+    
+        // Visa spelgränssnittet
+        document.getElementById("sceneContainer").style.display = "flex";
+    
+        // Ändra bakgrund för första scenen och visa texten
+        changeBackground('story'); // Ändra till första scenens bakgrundsbild
+    
+        // Definiera texten för första scenen
+        const storyText = `A young man wakes up in a dark cave, alone and disoriented. The only thing he remembers is a mysterious map hidden in his pocket, showing the way to a legendary treasure, the lost ark.`;
+        
+        // Börja med typningseffekten för första scenen
+        typeText(storyText, () => {
+            setTimeout(() => showWhisperOptions(), 500); // Visa whisper options efter typning är klar
+        });
+    }
+
 
 function showScene(scene) {
     const content = document.getElementById("content");
@@ -177,10 +194,23 @@ function showPopupMessage(message) {
     }, 3000);
 }
 
+
+const audio = new Audio('images_audio/wiseManSaid.mp3');
+let isPlaying = false;
+
 function listenToTheOldMan() {
-    const audio = new Audio('wiseManSaid.mp3');
-    audio.play();
+    isPlaying ? audio.pause() : audio.play();
+
+    audio.onplaying = function() {
+        isPlaying = true;
+    }
+    
+    audio.onpause = function() {
+        isPlaying = false;
+    }
 }
+
+
 
 function exploreText() {
     const content = document.getElementById("content");
