@@ -139,16 +139,16 @@ function changeBackground(scene) {
     // Här definierar vi bakgrundsbilder för varje scen
     switch (scene) {
         case "story":
-            body.style.backgroundImage = "url('cave.webp')";
+            body.style.backgroundImage = "url('images_audio/youngMan.webp')";
             break;
         case "explore":
-            body.style.backgroundImage = "url('oldSage.png')";
+            body.style.backgroundImage = "url('images_audio/oldSage.png')";
             break;
         case "ignore":
-            body.style.backgroundImage = "url('textOnTheWall.webp')";
+            body.style.backgroundImage = "url('images_audio/textOnTheWall.webp')";
             break;
         default:
-            body.style.backgroundImage = "url('cave.webp')";
+            body.style.backgroundImage = "url('images_audio/cave.webp')";
             break;
     }
 

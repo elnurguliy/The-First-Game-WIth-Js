@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Signika:wght@300..700&family=VT323&display=swap');
 
 body {
-    background-image: url(black.jpeg); /* Skapa en solid svart bakgrundsbild */
+    background-image: url(images_audio/black.jpeg); /* Skapa en solid svart bakgrundsbild */
     background-size: cover;
     background-position: center;
     transition: background-image 1s ease-in-out; /* Smidig övergång */
